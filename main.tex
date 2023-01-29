@@ -35,20 +35,24 @@
  
 \usepackage{graphicx}
 \usepackage{placeins}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{0302}{\^{e}}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
-
+% set today to french format
+\usepackage[francais]{babel}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt}
-%\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 \fancyhead{}
 \fancyhead[L]{Report Title} %%% CHANGE AS APPROPRIATE (you may need to use a shortened form of the title)
 \fancyhead[R]{student ID} %%% CHANGE AS APPROPRIATE
 \fancyfoot{}
 \fancyfoot[C]{\thepage}
+
 
 \usepackage{titlesec}
 \titlespacing{\chapter}{0pt}{*4}{*2.5}
@@ -79,14 +83,16 @@
 \tableofcontents 
 \addtocontents{toc}{~\hfill\textbf{Page}\par} % comment this line out if you want to remove "Page"
 \input{Chapter1} % standard chapter format
-
-%\input{Conclusions}
+\input{Chapter2}
+\input{Chapter3}
+\input{Chapter4}
+\input{Chapter5}
+\input{Conclusions}
 %\appendix
 %\input{appendix}  % uncomment out these two lines of code if you have an appendix!
 % you can have more than one appendix if (really) needed.
 
 \printbibliography[keyword=primary, title=References]\addcontentsline{toc}{chapter}{References}
 
-%% uncomment next line if you want a Bibliography section also!
-%\printbibliography[keyword=secondary,title=Bibliography]\addcontentsline{toc}{chapter}{Bibliography}
+
 \end{document}
