@@ -21,6 +21,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 
+
+
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
@@ -46,16 +48,17 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+
+
 \fancyhead{}
-\fancyhead[L]{Report Title} %%% CHANGE AS APPROPRIATE (you may need to use a shortened form of the title)
-\fancyhead[R]{student ID} %%% CHANGE AS APPROPRIATE
-\fancyfoot{}
-\fancyfoot[C]{\thepage}
+% add chapter name 
+\fancyhead[L]{SABOUNI Ahmed} %%% CHANGE AS APPROPRIATE (you may need to use a shortened form of the title)
+\fancyhead[R]{\today} %%% CHANGE AS APPROPRIATE
+
 
 
 \usepackage{titlesec}
-\titlespacing{\chapter}{0pt}{*4}{*2.5}
+\titlespacing{\chapter}{0cm}{-0.5cm}{0cm}
 
 \titleformat{\chapter}{\normalfont\huge\bf}{\thechapter}{20pt}{\huge\bf}
 %% prevents Chapter 1 (then new line and Introduction) - turns into 1. Introduction
@@ -82,8 +85,11 @@
 \input{Abstract} %% any other "Front matter" should go here before the table of contents - format in a style similar to the file Abstract.tex
 \tableofcontents 
 \addtocontents{toc}{~\hfill\textbf{Page}\par} % comment this line out if you want to remove "Page"
+
+
 \input{Chapter1} % standard chapter format
 \input{Chapter2}
+\input{test}
 \input{Chapter3}
 \input{Chapter4}
 \input{Chapter5}
