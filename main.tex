@@ -37,6 +37,7 @@
  
 \usepackage{graphicx}
 \usepackage{placeins}
+\usepackage{listings}
 \usepackage[utf8]{inputenc}
 \DeclareUnicodeCharacter{0302}{\^{e}}
 
@@ -80,23 +81,32 @@
 \input{formatting}
 \setcounter{tocdepth}{1} % allow only sections (not subsections in table of contents)
 
-\begin{document}
+  \begin{document}
 \input{titlepage}
-\input{Abstract} %% any other "Front matter" should go here before the table of contents - format in a style similar to the file Abstract.tex
+%% any other "Front matter" should go here before the table of contents - format in a style similar to the file Abstract.tex
 \tableofcontents 
 \addtocontents{toc}{~\hfill\textbf{Page}\par} % comment this line out if you want to remove "Page"
 
 
 \input{Chapter1} % standard chapter format
 \input{Chapter2}
-\input{test}
+% prevent page break after chapter 2
+\begingroup
+\let\clearpage\relax
+\addvspace{1.2cm}
 \input{Chapter3}
-\input{Chapter4}
+\addvspace{1.2cm}
 \input{Chapter5}
-\input{Conclusions}
+\endgroup
+\input{conclusion}
+%\let\clearpage\relax
+
+
 %\appendix
 %\input{appendix}  % uncomment out these two lines of code if you have an appendix!
 % you can have more than one appendix if (really) needed.
+% deactivate clearpage relaxation
+
 
 \printbibliography[keyword=primary, title=References]\addcontentsline{toc}{chapter}{References}
 

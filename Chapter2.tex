@@ -4,23 +4,27 @@
 \section{L'interêt des tests logiciels}
 \label{sec:interet}
 Les tests logiciels sont un processus systématique de vérification du logiciel pour s'assurer de son fonctionnement correct et de la conformité aux exigences spécifiées.
-Les tests logiciels sont importants pour garantir la qualité et la fiabilité du produit logiciel. Ils permettent de détecter les erreurs et les bugs avant la livraison, ce qui peut réduire les coûts liés à la correction des erreurs en production. Les tests logiciels peuvent également renforcer la confiance des clients et des utilisateurs finaux dans la qualité du produit, ce qui peut améliorer la réputation de l'entreprise et augmenter les chances de vente. Bien que les tests logiciels nécessitent un investissement en temps et en ressources, ils peuvent finalement permettre de réaliser des économies durant toute la durée de vie des produits.\parencite{classification}
+Les tests logiciels sont importants pour garantir la qualité et la fiabilité du produit logiciel. Ils permettent de détecter les erreurs et les bugs avant la livraison, ce qui peut réduire les coûts liés à la correction des erreurs en production. Les tests logiciels peuvent également renforcer la confiance des clients et des utilisateurs finaux dans la qualité du produit, ce qui peut améliorer la réputation de l'entreprise et augmenter les chances de vente. Bien que les tests logiciels nécessitent un investissement en temps et en ressources, ils peuvent finalement permettre de réaliser des économies durant toute la durée de vie des produits \parencite{interet}.
 
-\section{Classification des tests}
+% section with reference to bibliography
+\section[Classification des tests]{Classification des tests logiciels par \parencite{classification}}
 \label{sec:classification}
 Les tests logiciels peuvent être classifiés en fonction de différents critères tels que la catégorie, le niveau, la technique et les types. Chacun de ces critères a ses propres avantages et inconvénients.
 %initiate list environment
 \begin{itemize}
-\item Catégories :
+\item Catégorie :
 Les tests peuvent être classés en tests dynamiques et tests statiques. Les tests dynamiques peuvent être automatisés, tandis que les tests statiques sont généralement effectués manuellement. Les tests dynamiques ont l'avantage d'être plus rapides et plus fiables, mais peuvent être coûteux à mettre en place. Les tests statiques, quant à eux, sont moins coûteux, mais nécessitent une intervention humaine pour les effectuer et peuvent être plus longs et moins fiables.
 
 \item Niveau :
-Les tests peuvent également être classés en fonction du niveau dans lequel ils sont effectués. Les tests de niveau unitaire sont effectués sur des composants individuels du logiciel. Les tests d'intégration sont effectués lorsque plusieurs composants du logiciel sont combinés et testés ensemble. Les tests de système sont effectués sur le système dans son intégralité. Enfin, les tests d'acceptation sont effectués pour vérifier si le produit répond aux exigences des utilisateurs. Chacun de ces niveaux de test a des avantages et des inconvénients spécifiques en termes de coût, de rapidité et de fiabilité.\parencite{SoftwareQualityEngineering}
+Les tests peuvent également être classés en fonction du niveau des composants téstées. Les tests de niveau unitaire sont effectués sur des composants individuels du logiciel comme par exemple des méthodes et des fonctions.Un peu plus haut tests d'intégration sont effectués lorsque plusieurs composants du logiciel sont combinés et testés ensemble. Les tests de système sont effectués sur le système dans son intégralité. Enfin, les tests d'acceptation sont effectués pour vérifier si le produit répond aux exigences des utilisateurs. Chacun de ces niveaux de test a des avantages et des inconvénients spécifiques en termes de coût, de rapidité et de fiabilité.
 
 \item Technique :
-Les tests peuvent également être classés en tests fonctionnels et non-fonctionnels. Les tests fonctionnels vérifient si le logiciel fonctionne correctement en répondant aux exigences fonctionnelles. Les tests non-fonctionnels, quant à eux, vérifient les aspects du logiciel tels que la performance, la sécurité et la qualité de l'expérience utilisateur. Les tests fonctionnels ont l'avantage de pouvoir être automatisés et de couvrir les exigences fonctionnelles, mais peuvent ne pas être suffisants pour couvrir les aspects non-fonctionnels du logiciel. Les tests non-fonctionnels, quant à eux, peuvent être plus difficiles à automatiser et à mesurer, mais ils fournissent une vue complète de la qualité du logiciel.
+Lorsqu'il s'agit de la technique de test, on distingue principalement les tests non fonctionnels, également appelés tests en boîte blanche, et les tests fonctionnels, appelés tests en boîte noire. La différence qui distingue les tests en boîte noire (BBT) des tests en boîte blanche (WBT) est la question de "perspective". Le BBT considère les objets à tester comme une boîte noire en se concentrant sur les relations entrée-sortie ou sur le comportement fonctionnel externe. Tandis que le WBT considère les objets comme une boîte transcparente où les détails d'implémentation interne sont visibles et testés. Le BBT et le WBT peuvent également être comparés en fonction de la façon dont ils abordent les questions suivantes : objets, chronologie, focus sur les défauts, détection et correction des défauts. Le BBT est généralement effectué par des testeurs professionnels dédiés et peut également être effectué par des tiers dans un contexte vérification et validation indépendantes, tandis que le WBT est souvent effectué par les développeurs eux-mêmes \parencite{SoftwareQualityEngineering}.
 
-\item Types : Enfin, les tests peuvent également être classés selon leur type spécifique, tels que les tests de sécurité, de performance, d'utilisabilité, etc. Les tests de sécurité sont effectués pour vérifier la sécurité du produit et éviter les menaces potentielles, tandis que les tests de performance sont effectués pour vérifier la rapidité et l'efficacité du produit. Les tests d'utilisabilité sont axés sur l'expérience utilisateur et la facilité d'utilisation du produit.
+\item Types : Enfin, il existe des tests spécifique comme les tests de performance de sécurité et d'utilisabilité. Ils sont effectué par des experts dans ces domaines \parencite{classification}.
+
+
+
 \end{itemize}
 
 
@@ -38,13 +42,14 @@ Les tests d'acceptation visent à évaluer le logiciel du point de vue de l'util
     
     \hline
     \hline
-    & tests d'acceptation  \\ \hline
+    & Tests d'acceptation  \\ \hline
     Technique & boite noir \\ \hline
-    réalisé par & testeurs et developpeurs \\ \hline
-    Quand ? & à la fin du projet \\ \hline
+    réalisé par & les testeurs et les developpeurs \\ \hline
+    Quand ? & après le développement \\ \hline
     Comment ? & manuellement ou automatiquement (statique ou dynamique) \\ \hline
     Pourquoi ? & pour vérifier si le produit répond aux exigences des utilisateurs \\ \hline
     \hline
 \end{tabular}
 \end{center}
-Le test automatisé implique le développement de scripts de test à l'aide de langages de script tels que Python, JavaScript ou Tcl afin que les cas de test puissent être exécutés par des ordinateurs avec un minimum d'intervention humaine. La conception et le développement de tests peuvent être automatisés pour réduire l'effort humain et économiser de l'argent. Le logiciel d'automatisation peut également saisir des données de test dans le système en test, comparer les résultats attendus et réels et générer des rapports de test détaillés. Le test automatisé nécessite des investissements considérables en argent et en ressources. Les cycles de développement successifs nécessiteront l'exécution de la même suite de tests à plusieurs reprises. En utilisant un outil d'automatisation de tests, il est possible d'enregistrer cette suite de tests et de la rejouer au besoin. Une fois la suite de tests automatisée, aucune intervention humaine n'est nécessaire. Le but de l'automatisation est de réduire le nombre de cas de test à exécuter manuellement et non pas d'éliminer complètement les tests manuels. Les avantages du test automatisé sont la rapidité, l'efficacité coût, la répétabilité, la réutilisabilité, la programmabilité, la couverture complète et la fiabilité. Le test automatisé n'est pas toujours nécessaire, approprié ou rentable, mais une analyse peut aider à déterminer les bénéfices d'un test automatisé par rapport à un test manuel. La bonne gestion peut être obtenue en identifiant et en estimant les coûts et les avantages du test automatisé.
+Le test automatisé implique le développement de scripts de test à l'aide de langages de programmation tels que Python, JavaScript ou Java afin que les cas de test puissent être exécutés automatiquement avec un minimum d'intervention humaine. Ceci a l'avantage de réduire l'effort humain et économiser de l'argent. Le logiciel d'automatisation peut également saisir des données de test dans le système en test, comparer les résultats attendus et réels et générer des rapports de test détaillés \parencite{automation}. Le test automatisé nécessite des investissements considérables en argent et en ressources.  il est possible d'enregistrer cette suite de tests et de la rejouer au besoin. Une fois la suite de tests automatisée, aucune intervention humaine n'est nécessaire. Le but de l'automatisation est de réduire le nombre de cas de test à exécuter manuellement et non pas d'éliminer complètement les tests manuels. Les avantages du test automatisé sont la rapidité, l'efficacité coût, la répétabilité, la réutilisabilité, la programmabilité, la couverture complète et la fiabilité. Le test automatisé n'est pas toujours nécessaire, approprié ou rentable, mais une analyse peut aider à déterminer les bénéfices d'un test automatisé par rapport à un test manuel. La bonne gestion peut être obtenue en identifiant et en estimant les coûts et les avantages du test automatisé \parencite{automation2}.
+
