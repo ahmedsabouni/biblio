@@ -21,7 +21,7 @@ Les tests peuvent également être classés en fonction du niveau des composants
 \item Technique :
 Lorsqu'il s'agit de la technique de test, on distingue principalement les tests non fonctionnels, également appelés tests en boîte blanche, et les tests fonctionnels, appelés tests en boîte noire. La différence qui distingue les tests en boîte noire (BBT) des tests en boîte blanche (WBT) est la question de "perspective". Le BBT considère les objets à tester comme une boîte noire en se concentrant sur les relations entrée-sortie ou sur le comportement fonctionnel externe. Tandis que le WBT considère les objets comme une boîte transcparente où les détails d'implémentation interne sont visibles et testés. Le BBT et le WBT peuvent également être comparés en fonction de la façon dont ils abordent les questions suivantes : objets, chronologie, focus sur les défauts, détection et correction des défauts. Le BBT est généralement effectué par des testeurs professionnels dédiés et peut également être effectué par des tiers dans un contexte vérification et validation indépendantes, tandis que le WBT est souvent effectué par les développeurs eux-mêmes \parencite{SoftwareQualityEngineering}.
 
-\item Types : Enfin, il existe des tests spécifique comme les tests de performance de sécurité et d'utilisabilité. Ils sont effectué par des experts dans ces domaines \parencite{classification}.
+\item Types : Enfin, il existe des tests spécifique comme les tests de performance, de sécurité ou d'utilisabilité. Ils sont effectué par des experts dans ces domaines \parencite{classification}.
 
 
 
@@ -30,7 +30,7 @@ Lorsqu'il s'agit de la technique de test, on distingue principalement les tests 
 
 
 \section[les tests d'acceptation et l'automatisation]{L'interêt des tests d'acceptation et l'importance de leur automatisation}
-Les tests d'acceptation visent à évaluer le logiciel du point de vue de l'utilisateur et se concentrent sur les scénarios d'utilisation, les séquences, les modèles et les fréquences associées. Ils sont généralement plus adaptés aux logiciels lourds et leurs composants en tant qu'ensemble. Ils ont une relation étroite avec les clients et les utilisateurs et sont effectués dans les phases finales de test. L'environnement de test est similaire à celui utilisé par l'utilisateur final. Ces tests doivent étre décidé. 
+Les tests d'acceptation visent à évaluer le logiciel du point de vue de l'utilisateur et se concentrent sur les scénarios d'utilisation, les séquences, les modèles et les fréquences associées. Ils sont généralement plus adaptés aux logiciels lourds et leurs composants en tant qu'ensemble. Ils ont une relation étroite avec les clients et les utilisateurs et sont effectués dans les phases finales de test. L'environnement de test est similaire à celui utilisé par l'utilisateur final. 
 
 
 
@@ -43,13 +43,14 @@ Les tests d'acceptation visent à évaluer le logiciel du point de vue de l'util
     \hline
     \hline
     & Tests d'acceptation  \\ \hline
+    Catégorie  & statique ou dynamique \\ \hline
     Technique & boite noir \\ \hline
-    réalisé par & les testeurs et les developpeurs \\ \hline
+    Responsable & les testeurs et les developpeurs \\ \hline
     Quand ? & après le développement \\ \hline
-    Comment ? & manuellement ou automatiquement (statique ou dynamique) \\ \hline
     Pourquoi ? & pour vérifier si le produit répond aux exigences des utilisateurs \\ \hline
     \hline
 \end{tabular}
 \end{center}
-Le test automatisé implique le développement de scripts de test à l'aide de langages de programmation tels que Python, JavaScript ou Java afin que les cas de test puissent être exécutés automatiquement avec un minimum d'intervention humaine. Ceci a l'avantage de réduire l'effort humain et économiser de l'argent. Le logiciel d'automatisation peut également saisir des données de test dans le système en test, comparer les résultats attendus et réels et générer des rapports de test détaillés \parencite{automation}. Le test automatisé nécessite des investissements considérables en argent et en ressources.  il est possible d'enregistrer cette suite de tests et de la rejouer au besoin. Une fois la suite de tests automatisée, aucune intervention humaine n'est nécessaire. Le but de l'automatisation est de réduire le nombre de cas de test à exécuter manuellement et non pas d'éliminer complètement les tests manuels. Les avantages du test automatisé sont la rapidité, l'efficacité coût, la répétabilité, la réutilisabilité, la programmabilité, la couverture complète et la fiabilité. Le test automatisé n'est pas toujours nécessaire, approprié ou rentable, mais une analyse peut aider à déterminer les bénéfices d'un test automatisé par rapport à un test manuel. La bonne gestion peut être obtenue en identifiant et en estimant les coûts et les avantages du test automatisé \parencite{automation2}.
+L'automatisation implique le développement de scripts de test à l'aide de langages de programmation tels que Python, JavaScript ou Java afin que les cas de test puissent être exécutés automatiquement avec un minimum d'intervention humaine. Ceci a l'avantage de réduire l'effort humain et économiser de l'argent. Le logiciel d'automatisation peut également saisir des données de test dans le système, comparer les résultats attendus et réels et aussi générer des rapports de test détaillés \parencite{automation}. Le test automatisé nécessite des investissements considérables en argent et en ressources. Il est également possible d'enregistrer les suites de tests et de les rejouer au besoin. Une fois la suite de tests automatisée, aucune intervention humaine n'est nécessaire. Le but de l'automatisation est de réduire le nombre de cas de test à exécuter manuellement et non pas d'éliminer complètement les tests manuels. 
+Les avantages des tests automatisés sont nombreux: la rapidité, l'efficacité, la répétabilité, la réutilisabilité, la programmabilité, la couverture complète et la fiabilité. Malgré tout ces avantages il n'est pas toujours nécessaire, approprié ou rentable d'automatiser ces tests, mais une analyse peut aider à déterminer les bénéfices d'un test automatisé par rapport à un test manuel. La bonne gestion peut être obtenue en identifiant et en estimant les coûts et les avantages du test automatisé \parencite{automation2}.
 
